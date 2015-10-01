@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-helloo	
-
 <?php
-echo 'Работает PHP!';
-?>
-</body>
-</html>
+/**
+* Index.pxp - фронт-конероллер.
+* представляет единую точку входа впрограмму
+* иподгружает остальные файлы:
+* 1. Контроллер (kontpoller)
+* 2. Модель (model)
+*/
+
+
+include_once 'Model/model.php';
+
+include_once 'Controller/controller.php';
