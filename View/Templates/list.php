@@ -3,7 +3,7 @@
 	<ol>
 		<?php foreach ($posts as $post): ?>
 			<li>
-				<a href="./index.php?id=<?php echo $post['id'];?>">
+				<a href="/kuzina/index.php/show?id=<?php echo $post['id'];?>">
 					<?php echo $post['title'];?>
 				</a>
 
@@ -13,4 +13,4 @@
 	</ol>
 <?php $content=ob_get_clean(); ?>
 
-<?php require 'View/Templates/layout.php'; ?>
+<?php require "View/Templates/layout.php"; 

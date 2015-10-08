@@ -1,0 +1,88 @@
+﻿pupil@debian2:~$ ls
+2015-09-14-12-47-12.080-VirtualBox-2022.log  Видео        Общедоступные
+Sites                                        Документы    Рабочий стол
+Sites_2KTVR                                  Загрузки     Шаблоны
+Sites5                                       Изображения
+VirtualBox VMs                               Музыка
+pupil@debian2:~$ cd Sites
+pupil@debian2:~/Sites$ ls
+html
+pupil@debian2:~/Sites$ cd html
+pupil@debian2:~/Sites/html$ ls
+index.html  Karin  kuzina  pi.php
+pupil@debian2:~/Sites/html$ cd kuzina/
+pupil@debian2:~/Sites/html/kuzina$ ls
+admin.php  Controller  index.php  Model  View
+pupil@debian2:~/Sites/html/kuzina$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Controller/
+	Model/
+	View/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+pupil@debian2:~/Sites/html/kuzina$ git add .
+pupil@debian2:~/Sites/html/kuzina$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Controller/controller.php
+	new file:   Model/model.php
+	new file:   View/Templates/layout.php
+	new file:   View/Templates/list.php
+	modified:   index.php
+
+pupil@debian2:~/Sites/html/kuzina$ git commit -m "Создали контроллер и добавили пояснительные комментарии к файлам"
+[master 7950e1f] Создали контроллер и добавили пояснительные комментарии к файлам
+ Committer: pupil <pupil@debian2>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 91 insertions(+), 13 deletions(-)
+ create mode 100644 Controller/controller.php
+ create mode 100644 Model/model.php
+ create mode 100644 View/Templates/layout.php
+ create mode 100644 View/Templates/list.php
+pupil@debian2:~/Sites/html/kuzina$ git log
+commit 7950e1f1ecd7a665a45fc62ba5c6e7956bf55170
+Author: pupil <pupil@debian2>
+Date:   Thu Oct 1 19:47:29 2015 +0300
+
+    Создали контроллер и добавили пояснительные комментарии к файлам
+
+commit 8ea2acadff738d79781fb5324ca9d36c99d4ca4d
+Author: pupil <pupil@debian2>
+Date:   Mon Sep 21 18:35:28 2015 +0300
+
+    commit 2
+pupil@debian2:~/Sites/html/kuzina$ git remote -v
+origin	https://github.com/KuzinaValentina/kuzina.git (fetch)
+origin	https://github.com/KuzinaValentina/kuzina.git (push)
+pupil@debian2:~/Sites/html/kuzina$ git push origin master
+Username for 'https://github.com': KuzinaValentina
+Password for 'https://KuzinaValentina@github.com': 
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (11/11), 1.91 KiB | 0 bytes/s, done.
+Total 11 (delta 0), reused 0 (delta 0)
+To https://github.com/KuzinaValentina/kuzina.git
+   8ea2aca..7950e1f  master -> master
+pupil@debian2:~/Sites/html/kuzina$ 
